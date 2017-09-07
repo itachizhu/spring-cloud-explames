@@ -1,0 +1,23 @@
+server:
+  port: 19411
+spring:
+  application:
+    name: zipkin-stream-server
+  sleuth:
+    enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/zipkin??characterEncoding=utf-8&useUnicode=true
+    username: cmsdemo
+    password: cmsdemo@123
+    driver-class-name: com.mysql.jdbc.Driver
+    continue-on-error: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+zipkin:
+  storage:
+    type: mysql
+    strict-trace-id: true
+debug: true

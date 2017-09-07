@@ -1,0 +1,16 @@
+server:
+  port: 1114
+  context-path: /producer
+spring:
+  application:
+    name: eureka-context-path-producer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+  instance:
+    health-check-url-path: ${server.context-path}/health
+    home-page-url-path: ${server.context-path}/
+    status-page-url-path: ${server.context-path}/info
+    metadata-map:
+      management.context-path: ${server.context-path}

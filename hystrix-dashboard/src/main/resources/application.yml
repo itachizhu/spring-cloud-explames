@@ -1,0 +1,4 @@
+server:
+  port: 2222
+
+# http://localhost:2222/hystrix 查看图表

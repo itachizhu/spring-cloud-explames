@@ -1,0 +1,5 @@
+# zipkin-stream-server
+
+使用流式的情况需要消息队列，我这里测试使用的是rabbitmq；
+我没有在windows环境下测试开发，因为太麻烦，在mac系统下使用brew可以用一行命令顺利安装好rabbitmq和mysql，可以进行快速开发；
+所以如果使用windows系统的话，这里不进行相关中间件的安装，请自己安装搭建好。

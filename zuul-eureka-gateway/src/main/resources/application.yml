@@ -1,0 +1,12 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: zuul-eureka-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+zuul:
+  host:
+    max-total-connections: 500

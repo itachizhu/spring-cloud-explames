@@ -1,0 +1,8 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888

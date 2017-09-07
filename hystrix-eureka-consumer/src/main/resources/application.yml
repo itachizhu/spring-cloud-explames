@@ -1,0 +1,15 @@
+server:
+  port: 1117
+spring:
+  application:
+    name: hystrix-eureka-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+#ribbon:
+#  eureka:
+#    enabled: true
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,12 @@
+server:
+  port: 19528
+spring:
+  zipkin:
+    base-url: http://localhost:19411/
+  application:
+    name: zipkin-stream-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

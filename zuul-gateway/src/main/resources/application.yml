@@ -1,0 +1,12 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: zuul-gateway
+zuul:
+  routes:
+    mcloud:
+      path: /mcloud/**
+      url: http://localhost:9090/mcloud/
+  ignored-services: '*'
+  strip-prefix: false
