@@ -23,6 +23,8 @@
         <module>eureka-context-path-producer</module>
         <module>hystrix-eureka-consumer</module>
         <module>hystrix-dashboard</module>
+        <module>hystrix-turbine</module>
+        <module>ribbon-hystrix-eureka-consumer</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -375,6 +377,21 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-turbine</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-turbine</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-archaius</artifactId>
                 <version>${spring.cloud.version}</version>
             </dependency>
 

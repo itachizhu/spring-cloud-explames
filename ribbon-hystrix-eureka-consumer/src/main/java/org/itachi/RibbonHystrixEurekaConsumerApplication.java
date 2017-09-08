@@ -7,18 +7,17 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 /**
- * Created by itachi on 2017/9/7.
+ * Created by itachi on 2017/9/8.
  * User: itachi
- * Date: 2017/9/7
- * Time: 10:02
+ * Date: 2017/9/8
+ * Time: 09:40
  */
-// 没集成turbine时，下面的注解可以不用
 @EnableCircuitBreaker
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-public class HystrixEurekaConsumerApplication {
+public class RibbonHystrixEurekaConsumerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(HystrixEurekaConsumerApplication.class, args);
+        SpringApplication.run(RibbonHystrixEurekaConsumerApplication.class, args);
     }
 }

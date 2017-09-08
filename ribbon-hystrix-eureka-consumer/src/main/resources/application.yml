@@ -1,15 +1,14 @@
 server:
-  port: 1117
+  port: 1119
 spring:
   application:
-    name: hystrix-eureka-consumer
+    name: ribbon-hystrix-eureka-consumer
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka/
   instance:
     prefer-ip-address: true
-# 没有集成turbine的时候，下面这个配置可以不用
 ribbon:
   eureka:
     enabled: true

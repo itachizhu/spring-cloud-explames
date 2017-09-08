@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hystrix-eureka-consumer</artifactId>
+    <artifactId>ribbon-hystrix-eureka-consumer</artifactId>
     <packaging>jar</packaging>
 
-    <name>hystrix-eureka-consumer</name>
+    <name>ribbon-hystrix-eureka-consumer</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -30,7 +30,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!-- 没集成turbine的时候，下面的依赖可以不用 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
