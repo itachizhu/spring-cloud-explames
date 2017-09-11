@@ -29,9 +29,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * Constructor disables the default security settings
      */
+    /*
     public WebSecurityConfig() {
         super(true);
     }
+    */
 
     @Override
     public void configure(WebSecurity web) throws Exception {
