@@ -1,5 +1,6 @@
 package org.itachi.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,6 +23,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Value("${server.context-path:/}")
+    private String contextPath;
+
     /**
      * Constructor disables the default security settings
      */
@@ -36,10 +40,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+        String path = "/".equalsIgnoreCase(contextPath.trim()) ? "" : contextPath.trim();
+        http.antMatcher(path + "/**")
+                .authorizeRequests()
+                .anyRequest()
+                .authenticated()
+                .and()
+                .csrf()
+                .disable();
+        /*
         http.antMatcher("/uaa/users/**")
                 .authorizeRequests()
                 .anyRequest()
                 .authenticated();
+        */
     }
 
     @Bean
