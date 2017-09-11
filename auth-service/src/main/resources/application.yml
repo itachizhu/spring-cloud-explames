@@ -1,0 +1,12 @@
+server:
+  port: 5000
+  context-path: /uaa
+debug: true
+spring:
+  data:
+    mongodb:
+      host: localhost
+      username: user
+      password: user123
+      database: financial
+      port: 27017

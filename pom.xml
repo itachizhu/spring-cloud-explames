@@ -25,6 +25,7 @@
         <module>hystrix-dashboard</module>
         <module>hystrix-turbine</module>
         <module>ribbon-hystrix-eureka-consumer</module>
+        <module>auth-service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -233,6 +234,11 @@
                 <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-mongodb</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
             <!--
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -270,6 +276,11 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>5.3.5.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>2.2.0.RELEASE</version>
             </dependency>
 
             <dependency>
