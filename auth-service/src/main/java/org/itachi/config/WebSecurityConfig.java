@@ -36,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.antMatcher("/users/**")
+        http.antMatcher("/uaa/users/**")
                 .authorizeRequests()
                 .anyRequest()
                 .authenticated();

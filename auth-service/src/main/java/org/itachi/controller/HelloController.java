@@ -16,7 +16,7 @@ public class HelloController {
         return "Home";
     }
 
-    @GetMapping("/hello")
+    @GetMapping("/users/hello")
     public String hello() {
         return "Hello World!";
     }
