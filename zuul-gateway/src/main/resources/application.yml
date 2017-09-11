@@ -10,3 +10,4 @@ zuul:
       url: http://localhost:9090/mcloud/
   ignored-services: '*'
   strip-prefix: false
+  sensitive-headers:
